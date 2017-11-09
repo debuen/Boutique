@@ -134,6 +134,9 @@ public class AltaPrenda extends javax.swing.JDialog {
             }
         });
 
+        jButton3.setBackground(new java.awt.Color(0, 102, 0));
+        jButton3.setFont(new java.awt.Font("Ebrima", 0, 11)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("REGISTRAR");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -225,7 +228,7 @@ public class AltaPrenda extends javax.swing.JDialog {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
                     .addComponent(jButton3))
@@ -273,7 +276,7 @@ public class AltaPrenda extends javax.swing.JDialog {
             JOptionPane.showMessageDialog(this, "Valor incorrecto", "ERROR", JOptionPane.ERROR_MESSAGE);
         }
         else{
-            //Boutique.prendas.addPrenda(prenda);
+            Boutique.prendas.addPrenda(prenda);
             JOptionPane.showMessageDialog(this, "Prenda dada de alta");            
             dispose();
         }

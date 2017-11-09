@@ -15,7 +15,10 @@ public class Prenda implements Serializable{
     private int stock;
 
     public Prenda() {
-            
+        codigo = "";
+        descripcion = "";
+        talla = "";
+        color= "";     
     }
     
     public Prenda(String codigo, String descripcion, double precioCoste, String talla, String color, double precioVenta, int stock) {
