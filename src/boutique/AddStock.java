@@ -25,7 +25,7 @@ public class AddStock extends javax.swing.JDialog {
     
     public AddStock(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
-        codigos = Boutique.prendas.codigos();
+        codigos = prendas.codigos();
         codigos.add("--");
         Collections.sort(codigos);
         initComponents();
@@ -64,7 +64,7 @@ public class AddStock extends javax.swing.JDialog {
 
         jButton1.setBackground(new java.awt.Color(0, 102, 0));
         jButton1.setFont(new java.awt.Font("Ebrima", 0, 11)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setForeground(new java.awt.Color(0, 102, 0));
         jButton1.setText("AÑADIR");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,7 +123,6 @@ public class AddStock extends javax.swing.JDialog {
                 JOptionPane.showMessageDialog(this, "Valor incorrecto", "ERROR", JOptionPane.ERROR_MESSAGE);
             }else {
                 prenda.setStock(stock + prenda.getStock());
-                Boutique.miFichero.grabar(Boutique.prendas);
                 JOptionPane.showMessageDialog(this,"El stock actual de " + prenda.getCodigo() + " es de " + prenda.getStock() + " unidades", "", JOptionPane.INFORMATION_MESSAGE);
                 dispose();
             }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.8.0_144" class="java.beans.XMLDecoder">
+<java version="1.8.0_131" class="java.beans.XMLDecoder">
  <object class="boutique.PrendasList" id="PrendasList0">
   <void property="prendas">
    <void method="add">
@@ -49,6 +49,78 @@
      </void>
      <void property="talla">
       <string>S</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="Modelo.Prenda">
+     <void property="codigo">
+      <string>prueba2</string>
+     </void>
+     <void property="color">
+      <string>verde</string>
+     </void>
+     <void property="descripcion">
+      <string>prueba2</string>
+     </void>
+     <void property="precioCoste">
+      <double>40.0</double>
+     </void>
+     <void property="precioVenta">
+      <double>60.0</double>
+     </void>
+     <void property="stock">
+      <int>16</int>
+     </void>
+     <void property="talla">
+      <string>M</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="Modelo.Prenda">
+     <void property="codigo">
+      <string>tejano</string>
+     </void>
+     <void property="color">
+      <string>amarillo</string>
+     </void>
+     <void property="descripcion">
+      <string>tejano</string>
+     </void>
+     <void property="precioCoste">
+      <double>50.0</double>
+     </void>
+     <void property="precioVenta">
+      <double>50.0</double>
+     </void>
+     <void property="talla">
+      <string>M</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="Modelo.Prenda">
+     <void property="codigo">
+      <string>camiseta</string>
+     </void>
+     <void property="color">
+      <string>rojo</string>
+     </void>
+     <void property="descripcion">
+      <string>camiseta</string>
+     </void>
+     <void property="precioCoste">
+      <double>30.0</double>
+     </void>
+     <void property="precioVenta">
+      <double>10.0</double>
+     </void>
+     <void property="stock">
+      <int>5</int>
+     </void>
+     <void property="talla">
+      <string>XL</string>
      </void>
     </object>
    </void>

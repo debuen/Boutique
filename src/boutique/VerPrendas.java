@@ -102,7 +102,7 @@ public class VerPrendas extends javax.swing.JDialog {
 
         jButton1.setBackground(new java.awt.Color(0, 102, 0));
         jButton1.setFont(new java.awt.Font("Ebrima", 0, 11)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setForeground(new java.awt.Color(0, 102, 0));
         jButton1.setText("BUSCAR");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,7 +112,7 @@ public class VerPrendas extends javax.swing.JDialog {
 
         jButton2.setBackground(new java.awt.Color(0, 102, 0));
         jButton2.setFont(new java.awt.Font("Ebrima", 0, 11)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setForeground(new java.awt.Color(0, 102, 0));
         jButton2.setText("CANCELAR");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -134,7 +134,6 @@ public class VerPrendas extends javax.swing.JDialog {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jButton2)
                         .addGap(7, 7, 7)))
-                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jComboBox1, 0, 130, Short.MAX_VALUE)
                     .addComponent(jComboBox3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -192,6 +191,7 @@ public class VerPrendas extends javax.swing.JDialog {
         String color = "";
         String talla = "";
         color = (String) jComboBox1.getSelectedItem();
+        talla = (String) jComboBox3.getSelectedItem();
         if ((color.isEmpty() || jComboBox1.getSelectedItem()=="--") && (talla.isEmpty() || jComboBox3.getSelectedItem()=="--")) {
             
         } else {

@@ -5,6 +5,8 @@
  */
 package boutique;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Marc
@@ -48,7 +50,7 @@ public class Menu extends javax.swing.JFrame {
 
         jButton2.setBackground(new java.awt.Color(0, 102, 0));
         jButton2.setFont(new java.awt.Font("Ebrima", 0, 11)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setForeground(new java.awt.Color(0, 102, 0));
         jButton2.setText("Ver Prendas");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,7 +60,7 @@ public class Menu extends javax.swing.JFrame {
 
         jButton3.setBackground(new java.awt.Color(0, 102, 0));
         jButton3.setFont(new java.awt.Font("Ebrima", 0, 11)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setForeground(new java.awt.Color(0, 102, 0));
         jButton3.setText("Stock");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -68,8 +70,8 @@ public class Menu extends javax.swing.JFrame {
 
         jButton4.setBackground(new java.awt.Color(0, 102, 0));
         jButton4.setFont(new java.awt.Font("Ebrima", 0, 11)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("Lista Prendas");
+        jButton4.setForeground(new java.awt.Color(0, 102, 0));
+        jButton4.setText("Total Prendas");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -78,7 +80,7 @@ public class Menu extends javax.swing.JFrame {
 
         jButton5.setBackground(new java.awt.Color(0, 102, 0));
         jButton5.setFont(new java.awt.Font("Ebrima", 0, 11)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
+        jButton5.setForeground(new java.awt.Color(0, 102, 0));
         jButton5.setText("Salir");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -88,7 +90,7 @@ public class Menu extends javax.swing.JFrame {
 
         jButton6.setBackground(new java.awt.Color(0, 102, 0));
         jButton6.setFont(new java.awt.Font("Ebrima", 0, 11)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(255, 255, 255));
+        jButton6.setForeground(new java.awt.Color(0, 102, 0));
         jButton6.setText("Alta Prenda");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -164,7 +166,9 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+        
+        JOptionPane.showMessageDialog(this,"El stock actual es de " + Boutique.prendas.prendasTotales() + " prendas, con un precio total de " + Boutique.prendas.precioTotal() + "€", "", JOptionPane.INFORMATION_MESSAGE);
+        
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
