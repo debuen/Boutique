@@ -231,7 +231,26 @@ public class TodasPrendas extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        contador--;
+        if(contador+1 == 1){
+            jButton2.setVisible(true);
+            jButton1.setVisible(false);
+        }else{
+            jButton1.setVisible(true);
+        }
+        
+        for(int i=prendas.size()-1; i < 0 ;i--){
 
+            Prenda prenda = prendas.get(contador);
+            jLabel8.setText(prenda.getCodigo());
+            jLabel9.setText(prenda.getDescripcion());
+            jLabel10.setText(prenda.getColor());
+            jLabel11.setText(prenda.getTalla());
+            jLabel12.setText(String.valueOf(prenda.getPrecioVenta()));
+            jLabel13.setText(String.valueOf(prenda.getPrecioCoste()));
+            jLabel14.setText(String.valueOf(prenda.getStock()));
+
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
