@@ -22,8 +22,22 @@ public class Prendas extends javax.swing.JDialog {
         super(parent, modal);
         colorTallaLista = Boutique.prendas.colorTallaPrendas(color, talla);
         initComponents();
+        if(colorTallaLista.size() == 1){
+            jButton1.setVisible(false);
+            jButton2.setVisible(false);
+        }else{
                 jButton1.setVisible(false);
-
+        }
+                for(int i=0;i<colorTallaLista.size();i++){
+                    Prenda prenda = colorTallaLista.get(0);   
+                jLabel8.setText(prenda.getCodigo());
+                jLabel9.setText(prenda.getDescripcion());
+                jLabel10.setText(prenda.getColor());
+                jLabel11.setText(prenda.getTalla());
+                jLabel12.setText(String.valueOf(prenda.getPrecioVenta()));
+                jLabel13.setText(String.valueOf(prenda.getPrecioCoste()));
+                jLabel14.setText(String.valueOf(prenda.getStock()));
+                }
     }
 
     /**
@@ -221,9 +235,15 @@ public class Prendas extends javax.swing.JDialog {
     
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         contador++;
+        if(contador+1 == colorTallaLista.size()){
+            jButton2.setVisible(false);
+            jButton1.setVisible(true);
+        }else{
+            jButton1.setVisible(true);
+        }
         for(int i=0;i<colorTallaLista.size();i++){
-            if(contador == colorTallaLista.size()){
-                jButton2.setVisible(false);
+           
+                
                 Prenda prenda = colorTallaLista.get(contador);   
                 jLabel8.setText(prenda.getCodigo());
                 jLabel9.setText(prenda.getDescripcion());
@@ -233,17 +253,7 @@ public class Prendas extends javax.swing.JDialog {
                 jLabel13.setText(String.valueOf(prenda.getPrecioCoste()));
                 jLabel14.setText(String.valueOf(prenda.getStock()));
                 
-            }else{
-                jButton1.setVisible(true);
-                Prenda prenda = colorTallaLista.get(contador);   
-                jLabel8.setText(prenda.getCodigo());
-                jLabel9.setText(prenda.getDescripcion());
-                jLabel10.setText(prenda.getColor());
-                jLabel11.setText(prenda.getTalla());
-                jLabel12.setText(String.valueOf(prenda.getPrecioVenta()));
-                jLabel13.setText(String.valueOf(prenda.getPrecioCoste()));
-                jLabel14.setText(String.valueOf(prenda.getStock()));
-            }    
+            
             
         }
         
