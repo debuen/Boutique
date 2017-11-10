@@ -1,6 +1,7 @@
 
 package boutique;
 
+import Modelo.Prenda;
 import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -12,7 +13,9 @@ import javax.swing.JOptionPane;
  */
 public class VerPrendas extends javax.swing.JDialog {
 
+    private ArrayList<Prenda> prendas;
     private ArrayList<String> colores;
+    
     public ArrayList<String> getColores() {
         return colores;
     }
@@ -30,6 +33,7 @@ public class VerPrendas extends javax.swing.JDialog {
     
     public VerPrendas(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
+        prendas = PrendasList.prendas;
         colores = Boutique.prendas.colores();
         colores.add("--");
         Collections.sort(colores);
@@ -188,17 +192,28 @@ public class VerPrendas extends javax.swing.JDialog {
     }//GEN-LAST:event_jComboBox3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String color = "";
-        String talla = "";
-        color = (String) jComboBox1.getSelectedItem();
-        talla = (String) jComboBox3.getSelectedItem();
-        if ((color.isEmpty() || jComboBox1.getSelectedItem()=="--") && (talla.isEmpty() || jComboBox3.getSelectedItem()=="--")) {
-            
-        } else {
-            Prendas ventanaColorTalla = new Prendas(null, true, color, talla);
-            ventanaColorTalla.setLocationRelativeTo(null);
-            ventanaColorTalla.setVisible(true);
-            dispose();
+        if(prendas.isEmpty()){
+            JOptionPane.showMessageDialog(this, "No hay prendas registradas", "ERROR", JOptionPane.ERROR_MESSAGE);
+        }   else{ 
+            String color = "";
+            String talla = "";
+            color = (String) jComboBox1.getSelectedItem();
+            talla = (String) jComboBox3.getSelectedItem();
+            if ((color.isEmpty() || jComboBox1.getSelectedItem()=="--") && (talla.isEmpty() || jComboBox3.getSelectedItem()=="--")) {
+                TodasPrendas ventanaColorTalla2 = new TodasPrendas(null, true);
+                ventanaColorTalla2.setLocationRelativeTo(null);
+                ventanaColorTalla2.setVisible(true);
+                dispose();
+            } else if((color.isEmpty() || jComboBox1.getSelectedItem()=="--") || (talla.isEmpty() || jComboBox3.getSelectedItem()=="--")){
+                JOptionPane.showMessageDialog(this, "Campo Vacio", "ERROR", JOptionPane.ERROR_MESSAGE);
+
+            }
+            else {
+                Prendas ventanaColorTalla = new Prendas(null, true, color, talla);
+                ventanaColorTalla.setLocationRelativeTo(null);
+                ventanaColorTalla.setVisible(true);
+                dispose();
+            }
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 

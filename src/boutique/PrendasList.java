@@ -104,6 +104,5 @@ public class PrendasList {
         }return PrendasColorTalla;
     }
     
-
      
 }
